@@ -47,7 +47,7 @@ function App() {
 
       <Navbar bg="dark" variant="dark" fixed="top">
       <Container>
-        <Navbar.Brand href="#home" style={{"color":"white"}}>
+        <Navbar.Brand onClick={fetchData} style={{"color":"white",cursor:'pointer'}}>
         <img
               src="https://i.pinimg.com/originals/4d/78/79/4d7879049736de0fc394cb31686bb6c9.gif"
               width="30"
@@ -56,7 +56,16 @@ function App() {
               alt="React Bootstrap logo"
             />
           
-          M-VUDU</Navbar.Brand>
+          M-VUDU</Navbar.Brand> 
+          
+       
+	<select xs={0} data-choose-theme class="focus:outline-none h-10 rounded-full px-3 border">
+		<option value="">Default</option>
+		<option value="dark">Dark</option>
+		<option value="purple">Purple</option>
+
+	</select>
+
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
@@ -75,7 +84,7 @@ function App() {
 
 <Row style={{marginTop:"7%"}}>
 {movies.map((item,i)=>(
-    <Col xs={3} lg={3}>
+    <Col xs={12} lg={3}>
          <RecipeReviewCard item={item} />
     </Col>
      ))}

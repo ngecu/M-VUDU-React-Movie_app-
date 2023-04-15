@@ -1,20 +1,76 @@
+:root {
+  --my-bg-color: #FEFEFE;
+  --my-theme-color:#C28BFF;
+  --my-card-bg-color:#F4F4FB;
+  --my-card-color:#000000;
+    /* or any other variables/style */
+}
+[data-theme='dark'] {
+  --my-bg-color: #000;
+  --my-card-bg-color:#1C1C1C;
+  --my-card-color:#ffffff;
+  
+}
+[data-theme='purple'] {
+  --my-bg-color: #8E5EA2;
+}
+
 body{
-  background-color: #1C2025 !important;
+  background-color: var(--my-bg-color) !important;
   color: white;
 }
 .ant-card{
-background-color: #1C1C1C;
-color: white;
-box-shadow:
-0 2.8px 2.2px rgba(146, 139, 139, 0.034),
-0 6.7px 5.3px rgba(105, 101, 101, 0.048),
-0 12.5px 10px rgba(82, 75, 75, 0.06),
-0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-0 41.8px 33.4px rgba(215, 206, 206, 0.086),
-0 100px 80px rgba(215, 206, 206, 0.12)
-;
+  
+background-color: var(--my-card-bg-color) ;
+color: var(--my-card-color);
+box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;;
 border: none !important;
 }
+.ant-card::hover{
+
+}
 .ant-card-meta-title{
-  color: white !important;
+  color: var(--my-card-color) !important;
+}
+
+
+
+select{
+  padding-top: .25rem;
+padding-bottom: .25rem;
+padding-left: .5rem;
+font-size: .875rem;
+border-radius: .25rem;
+font-weight: 400;
+line-height: 1.5;
+color: #212529;
+font-size: .875rem;
+}
+
+/* Mobile Devices */
+@media only screen and (max-width: 767px) {
+  /* Styles for small devices go here */
+  /* For example: */
+  .navbar-brand {
+   display: none;
+  }
+  select{
+    display: none;
+  }
+  .navbar-text{
+    width: 100%;
+  }
+  .ant-drawer-content-wrapper{
+    width: 50%;
+  }
+}
+
+/* Mobile and Tablet Devices */
+@media only screen and (max-width: 991px) {
+  /* Styles for medium devices go here */
+  /* For example: */
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
 }

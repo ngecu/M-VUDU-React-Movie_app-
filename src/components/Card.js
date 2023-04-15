@@ -34,8 +34,8 @@ export default function RecipeReviewCard({item}) {
   return(
     <>
     <Card
-    
-    onMouseOver={
+    hoverable
+    onClick={
       ()=>{
       showDrawer()
       setDrawerimg(`https://image.tmdb.org/t/p/w1280${item.poster_path}`)
